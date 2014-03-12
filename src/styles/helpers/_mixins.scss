@@ -1,0 +1,79 @@
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+// http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+@function calculateRem($size) {
+  // if html font-size is 100%
+  // $remSize: $size / 16px;
+  // if html font-size is 62.5% (base 10)
+  $remSize: $size / 10px;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+@mixin responsive-report() {
+	&:after {
+		content: "< 320px";
+		font-size: 200%;
+		font-weight: bold;
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		text-align: center;
+		background-color: hsla(1,60%,40%,0.8);
+		color: #fff;
+		padding: 0;
+	}
+
+	@media only screen and (min-width: 320px) {
+		&:after {
+			content: "< 480px";
+			background-color: hsla(90,60%,40%,0.8);
+		}
+	}
+
+	@media only screen and (min-width: 480px) {
+		&:after {
+			content: "< 768px";
+			background-color: hsla(180,60%,40%,0.8);
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		&:after {
+			content: "< 979px";
+			background-color: hsla(270,60%,40%,0.8);
+		}
+	}
+
+	@media only screen and (min-width: 979px) {
+		&:after {
+			content: "< 1199px";
+			background-color: hsla(360,60%,40%,0.8);
+		}
+	}
+
+	@media only screen and (min-width: 1199px) {
+		&:after {
+			content: "< 1366px";
+			background-color: hsla(209,60%,40%,0.8);
+		}
+	}
+
+	@media only screen and (min-width: 1366px) {
+		&:after {
+			content: "< 1440px";
+			background-color: hsla(100,60%,40%,0.8);
+		}
+	}
+
+	@media only screen and (min-width: 1440px) {
+		&:after {
+			content: "1440 >";
+			background-color: hsla(300,60%,40%,0.8);
+		}
+	}
+
+}

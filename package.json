@@ -1,0 +1,26 @@
+{
+  "name": "gulp",
+  "version": "0.0.0",
+  "description": "gulp",
+  "author": "gulper",
+  "devDependencies": {
+    "gulp": "*",
+    "coffee-script": "*",
+    "gulp-util": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-livereload": "*",
+    "tiny-lr": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-coffee": "*",
+    "gulp-connect": "*",
+    "gulp-jade": "*",
+    "gulp-clean": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "*",
+    "gulp-notify": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-sass": "~0.7.1"
+  }
+}

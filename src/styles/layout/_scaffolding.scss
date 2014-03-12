@@ -1,0 +1,14 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: geometricPrecision;
+	// @include responsive-report();
+}
+
+main, .container {
+	height: 100%;
+}
+
+.inner {
+	position: relative;
+	padding: 20px;
+}
