@@ -12,7 +12,6 @@
     "gulp-uglify": "*",
     "gulp-livereload": "*",
     "tiny-lr": "*",
-    "gulp-ruby-sass": "*",
     "gulp-coffee": "*",
     "gulp-connect": "*",
     "gulp-jade": "*",
