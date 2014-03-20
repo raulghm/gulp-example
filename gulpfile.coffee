@@ -41,7 +41,7 @@ gulp.task "jade", ->
 	.on "error", (err) ->
 		console.log "Error:", err
 	.pipe gulp.dest "./dist"
-	.pipe connect.reload()
+	.pipe livereload(server)
 
 # jade-dist
 gulp.task "jade-dist", ->
